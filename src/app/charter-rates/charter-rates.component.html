@@ -1,1 +1,28 @@
-<p>charter-rates works!</p>
+<div class="container-fluid" *ngFor="let eachBoatCharterRates of allBoatCharterRates">
+  <h4 class="text-center">{{ eachBoatCharterRates.boatName }}</h4>
+  <div class="row g-0">
+    <table>
+      <thead>
+      <tr>
+        <th class="col-2 border text-center">Boat</th>
+        <th class="col-2 border text-center">Charter Types</th>
+        <th class="col-2 border text-center">Fishing Types</th>
+        <th class="col-2 border text-center">Anglers</th>
+        <th class="col-2 border text-center">Weekday</th>
+        <th class="col-2 border text-center">Weekend</th>
+      </tr>
+      </thead>
+      <tbody *ngFor="let charterRate of eachBoatCharterRates.charterRates">
+      <tr>
+        <td class="col-2 border text-center">{{ charterRate.boatName }}</td>
+        <td class="col-2 border text-center">{{ charterRate.tripType }}</td>
+        <td class="col-2 border text-center">{{ charterRate.fishingType }}</td>
+        <td class="col-2 border text-center">{{ charterRate.capacity }}</td>
+        <td class="col-2 border text-center">{{ charterRate.weekdayPrice | currency }}</td>
+        <td class="col-2 border text-center">{{ charterRate.weekendPrice | currency  }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <br>
+</div>

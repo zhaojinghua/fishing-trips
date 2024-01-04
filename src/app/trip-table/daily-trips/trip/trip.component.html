@@ -1,29 +1,36 @@
-<div class="container-fluid col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+<div class="container-fluid col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 border">
   <table class="container-fluid">
     <tbody>
     <tr>
-      <td rowspan="2">
-          {{ trip.availableSpots < trip.capacity ? "Not full" : "Full" }}
+      <td class="col-1 border" rowspan="2">
+        {{ trip.availableSpots < trip.capacity ? "Open" : "Full" }}
       </td>
-      <td>
+      <td class="border">
         <div class="row g-0">
           <div style="padding-left: 15px; padding-right:15px;" class="col-md-3 col-sm-12 col-12">
             <strong>{{ trip.boatName }}</strong>
             <hr class="d-block d-md-none d-lg-none d-xl-none d-xxl-none">
           </div>
-          <div style="text-align: right;padding-left: 15px; padding-right:15px;" class="col-md-3 col-sm-6 col-12"><span style="float: left;" class="d-inline d-md-none fw-semibold">Departs: </span>{{ trip.departureDate | date: 'short' }}</div>
-          <div style="text-align: right;padding-left: 15px; padding-right:15px;" class="col-md-3 col-sm-6 col-12"><span style="float: left;" class="d-inline d-md-none fw-semibold">Return: </span>{{ trip.returnDate | date: 'short' }}</div>
-          <div style="padding-left: 15px; padding-right:15px;" class="col-md-1 col-sm-4 col-4"><span class="d-inline d-md-none fw-semibold">Load: </span>{{ trip.capacity }}</div>
-          <div style="padding-left: 15px; padding-right:15px;" class="col-md-1 col-sm-4 col-4"><span class="d-inline d-md-none fw-semibold">Price: </span>{{ trip.price }}</div>
-          <div style="padding-left: 15px; padding-right:15px;" class="col-md-1 col-sm-4 col-4"><span class="d-inline d-md-none fw-semibold">Spots: </span>{{ trip.availableSpots }}</div>
+          <div style="text-align: right;padding-left: 15px; padding-right:15px;" class="col-md-3 col-sm-6 col-12"><span
+            style="float: left;"
+            class="d-inline d-md-none fw-semibold">Departs: </span>{{ trip.departureDate | date: 'short' }}</div>
+          <div style="text-align: right;padding-left: 15px; padding-right:15px;" class="col-md-3 col-sm-6 col-12"><span
+            style="float: left;"
+            class="d-inline d-md-none fw-semibold">Return: </span>{{ trip.returnDate | date: 'short' }}</div>
+          <div style="padding-left: 15px; padding-right:15px;" class="col-md-1 col-sm-4 col-4"><span
+            class="d-inline d-md-none fw-semibold">Load: </span>{{ trip.capacity }}</div>
+          <div style="padding-left: 15px; padding-right:15px;" class="col-md-1 col-sm-4 col-4"><span
+            class="d-inline d-md-none fw-semibold">Price: </span>{{ trip.price }}</div>
+          <div style="padding-left: 15px; padding-right:15px;" class="col-md-1 col-sm-4 col-4"><span
+            class="d-inline d-md-none fw-semibold">Spots: </span>{{ trip.availableSpots }}</div>
         </div>
       </td>
     </tr>
-      <tr>
-        <div class="row g-0">
-          <div style="padding-left: 15px; padding-right:15px;" class="col-md-12 col-sm-12 col-12">{{ trip.notes }}</div>
-        </div>
-      </tr>
+    <tr>
+      <div class="row g-0">
+        <div style="padding-left: 15px; padding-right:15px;" class="col-md-12 col-sm-12 col-12">{{ trip.notes }}</div>
+      </div>
+    </tr>
     </tbody>
   </table>
 </div>

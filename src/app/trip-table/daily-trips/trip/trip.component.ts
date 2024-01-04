@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {Trip} from "./trip.model";
 
 @Component({
   selector: 'app-trip',

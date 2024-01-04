@@ -1,30 +1,3 @@
-<div *ngFor="let dailyTrip of dailyTrips">
-  <h4 class="text-center bolder">{{ dailyTrip.tripDate | date }}</h4>
-  <table class="table table-hover">
-    <thead>
-    <tr>
-      <th scope="col">Status</th>
-      <th scope="col">Trip Info</th>
-      <th scope="col">Departure</th>
-      <th scope="col">Return</th>
-      <th scope="col">Load</th>
-      <th scope="col">Price</th>
-      <th scope="col">Spots</th>
-    </tr>
-    </thead>
-    <tbody class="border-2" *ngFor="let trip of dailyTrip.trips">
-        <tr>
-          <td class="border-1" style="vertical-align: middle" rowspan="2">{{ trip.availableSpots < trip.capacity ? "Not full" : "Full" }}</td>
-          <td>{{ trip.boatName }}</td>
-          <td>{{ trip.departureDate | date: 'short' }}</td>
-          <td>{{ trip.returnDate | date: 'short' }}</td>
-          <td>{{ trip.capacity }}</td>
-          <td>{{ trip.price }}</td>
-          <td>{{ trip.availableSpots }}</td>
-        </tr>
-        <tr *ngIf="!!trip.notes">
-          <td colspan="7">{{ trip.notes }}</td>
-        </tr>
-    </tbody>
-  </table>
-</div>
+
+<app-trip></app-trip>
+

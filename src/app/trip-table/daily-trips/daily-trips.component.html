@@ -1,28 +1,29 @@
 <h4 style="text-align: center">{{dailyTrips.tripDate | date}}</h4>
 <div class="container-fluid">
   <div class="row d-none d-md-block d-lg-block d-xl-block d-xxl-block">
-    <div class="col-1 float-start text-center">
+    <div class="col-1 float-start" style="text-align: center;">
       <span class="fw-bold">Status</span>
     </div>
-    <div class="col-4 float-start text-center">
+    <div class="col-4 float-start"  style="text-align: center;">
       <span class="fw-bold">Trip Info</span>
     </div>
-    <div class="col-2 float-start text-center">
+    <div class="col-2 float-start" style="text-align: center;">
       <span class="fw-bold">Departure</span>
     </div>
-    <div class="col-2 float-start text-center">
+    <div class="col-2 float-start" style="text-align: center;">
       <span class="fw-bold">Return</span>
     </div>
-    <div class="col-1 float-start text-center">
+    <div class="col-1 float-start" style="text-align: center;">
       <span class="fw-bold">Load</span>
     </div>
-    <div class="col-1 float-start text-center">
+    <div class="col-1 float-start" style="text-align: center;">
       <span class="fw-bold">Price</span>
     </div>
-    <div class="col-1 float-start text-center">
+    <div class="col-1 float-start" style="text-align: center;">
       <span class="fw-bold">Spots</span>
     </div>
   </div>
 </div>
 <app-trip *ngFor="let trip of dailyTrips.trips" [trip]="trip"></app-trip>
+<br>
 <br>

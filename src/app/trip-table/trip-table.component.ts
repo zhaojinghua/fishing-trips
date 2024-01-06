@@ -18,5 +18,4 @@ export class TripTableComponent {
       new Trip('127', 'Sea Wolf', 25, 21, 200, new Date('2024-01-09T06:00:00'), new Date('2024-01-09T15:00:00')),
       new Trip('128', 'Salty Lady', 23, 18, 200, new Date('2024-01-09T06:00:00'), new Date('2024-01-09T15:00:00'))
     ])];
-
 }

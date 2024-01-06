@@ -5,3 +5,9 @@
 .navbar-brand {
   padding-left: 12px;
 }
+
+li.active {
+  background-color: #1eff28;
+  color: white;
+  border-radius: 5px;
+}

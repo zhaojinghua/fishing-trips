@@ -1,0 +1,41 @@
+.trip-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid black;
+  color: #261E14;
+}
+.trip-head {
+  background: white;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+.trip-details {
+  background-color: white;
+  font-size: 13px;
+  color: black;
+  text-align: center;
+  padding: 5px;
+}
+
+.trip-status {
+  background-color: white;
+  font-size: 13px;
+  color: black;
+  text-align: center;
+  padding: 5px;
+  border-right: 1px solid black;
+}
+
+.trip-notes {
+  font-size: 13px;
+  color: #000;
+  text-align: left;
+  padding: 5px;
+  border-top: 1px solid black;
+}
+

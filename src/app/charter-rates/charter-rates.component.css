@@ -1,3 +1,10 @@
 .container-bg {
   background: url("https://emeryville.fishingreservations.net/sales/images/emeryville-bg-map3.jpg");
 }
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

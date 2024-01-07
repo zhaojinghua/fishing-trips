@@ -1,28 +1,39 @@
 <div class="container-bg">
-  <div style="background-color: white; padding-top: 20px;" class="container" *ngFor="let eachBoatCharterRates of allBoatCharterRates">
+  <div style="background-color: white; padding-top: 20px;" class="container"
+       *ngFor="let eachBoatCharterRates of allBoatCharterRates">
     <h4 class="text-center">{{ eachBoatCharterRates.boatName }}</h4>
     <div class="row g-0">
-      <table>
+      <table class="border">
         <thead>
-        <tr>
-          <th class="col border text-center">Boat</th>
-          <th class="col border text-center">Charter Type</th>
-          <th class="col border text-center">Fishing Type</th>
-          <th class="col border text-center">Anglers</th>
-          <th class="col border text-center">Weekday</th>
-          <th class="col border text-center">Weekend</th>
+        <tr class="d-none d-md-table-row">
+          <div class="row col-12 g-0">
+            <div class="col-md-2 d-inline-grid" style="padding-left: 15px;"><span class="fw-semibold">Boat</span></div>
+            <div class="col-md-2 d-inline-grid" style="padding-left: 15px;"><span class="fw-semibold">Charter Type</span></div>
+            <div class="col-md-2 d-inline-grid" style="padding-left: 15px;"><span class="fw-semibold">Fishing Type</span></div>
+            <div class="col-md-2 d-inline-grid" style="padding-left: 15px;"><span class="fw-semibold">Anglers</span></div>
+            <div class="col-md-2 d-inline-grid" style="padding-left: 15px;"><span class="fw-semibold">Weekday</span></div>
+            <div class="col-md-2 d-inline-grid" style="padding-left: 15px;"><span class="fw-semibold">Weekend</span></div>
+          </div>
         </tr>
         </thead>
-        <tbody *ngFor="let charterRate of eachBoatCharterRates.charterRates">
-        <tr>
-          <td class="col border text-center">{{ charterRate.boatName }}</td>
-          <td class="col border text-center">{{ charterRate.tripType }}</td>
-          <td class="col border text-center">{{ charterRate.fishingType }}</td>
-          <td class="col border text-center">{{ charterRate.capacity }}</td>
-          <td class="col border text-center">{{ charterRate.weekdayPrice | currency }}</td>
-          <td class="col border text-center">{{ charterRate.weekendPrice | currency  }}</td>
+        <ng-container *ngFor="let charterRate of eachBoatCharterRates.charterRates">
+        <tr class="border">
+          <div class="row col-12 g-0">
+            <div class="col-md-2 col-sm-4 col-6 d-inline-grid" style="padding-left: 15px;"><span class="d-inline-block d-md-none fw-semibold">Boat:&nbsp;</span><span>{{ charterRate.boatName }}</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-6 d-inline-grid" style="padding-left: 15px;"><span class="d-inline-block d-md-none fw-semibold">Charter Type:&nbsp;</span><span>{{ charterRate.tripType }}</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-6 d-inline-grid" style="padding-left: 15px;"><span class="d-inline-block d-md-none fw-semibold">Fishing Type:&nbsp;</span><span>{{ charterRate.fishingType }}</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-6 d-inline-grid" style="padding-left: 15px;"><span class="d-inline-block d-md-none fw-semibold">Anglers:&nbsp;</span><span>{{ charterRate.capacity }}</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-6 d-inline-grid" style="padding-left: 15px;"><span class="d-inline-block d-md-none fw-semibold">Weekday:&nbsp;</span><span>{{ charterRate.weekdayPrice | currency }}</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-6 d-inline-grid" style="padding-left: 15px;"><span class="d-inline-block d-md-none fw-semibold">Weekend:&nbsp;</span><span>{{ charterRate.weekendPrice | currency  }}</span>
+            </div>
+          </div>
         </tr>
-        </tbody>
+        </ng-container>
       </table>
     </div>
     <br>

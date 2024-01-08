@@ -1,25 +1,26 @@
-<form style="margin-top: 50px;" (ngSubmit)="onSubmit(form)" #form="ngForm">
-  <div class="form-group">
+<h5 class="fw-semibold" style="margin-top: 20px;">Please fill in the form below and we will answer any questions you may have.</h5>
+<form style="margin-top: 20px;" (ngSubmit)="onSubmit(form)" #form="ngForm">
+  <div class="form-group row g-0" style="margin-top: 12px;">
     <label>First Name: </label>
     <input class="form-control" type="text" ngModel name="firstname" required #firstname="ngModel">
     <span *ngIf="firstname.invalid && firstname.touched">First name is not valid.</span>
   </div>
-  <div class="form-group">
+  <div class="form-group row g-0" style="margin-top: 12px;">
     <label>Last Name: </label>
     <input class="form-control" type="text" ngModel name="lastname" required #lastname="ngModel">
     <span *ngIf="lastname.invalid && lastname.touched">Last name is not valid.</span>
   </div>
-  <div class="form-group">
+  <div class="form-group row g-0" style="margin-top: 12px;">
     <label>Email: </label>
-    <input class="form-control" type="email" ngModel name="email" required #email="ngModel">
+    <input class="form-control" type="email" ngModel name="email" required email #email="ngModel">
     <span *ngIf="email.invalid && email.touched">Email is not valid.</span>
   </div>
-  <div class="form-group">
+  <div class="form-group row g-0" style="margin-top: 12px;">
     <label>Phone: </label>
     <input class="form-control" type="text" name="phone" ngModel required #phone="ngModel">
     <span *ngIf="phone.invalid && phone.touched">Message is not valid.</span>
   </div>
-  <div class="form-group">
+  <div class="form-group row g-0" style="margin-top: 12px;">
     <label>Message: </label>
     <input class="form-control" type="text" name="message" ngModel required #message="ngModel">
     <span *ngIf="message.invalid && message.touched">Message is not valid.</span>

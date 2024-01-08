@@ -17,7 +17,35 @@ export class CharterRatesComponent implements OnInit {
     new CharterRates('Sea Wolf',
       [
         new CharterRate('Sea Wolf', 'Private Charter', 'Rockfish/Lingcod', 20, 2800, 3200),
-        new CharterRate('Sea Wolf', 'Private Charter', 'Potluck', 20, 2800, 3200)])];
+        new CharterRate('Sea Wolf', 'Private Charter', 'Potluck', 20, 2800, 3200)])
+    ,
+    new CharterRates('Salty Lady',
+      [
+        new CharterRate('Salty Lady', 'Private Charter', 'Rockfish/Lingcod', 20, 2800, 3200),
+        new CharterRate('Salty Lady', 'Private Charter', 'Potluck', 20, 2800, 3200)])
+    ,
+    new CharterRates('C-Gull II',
+      [
+        new CharterRate('C-Gull II', 'Private Charter', 'Rockfish/Lingcod', 20, 2800, 3200),
+        new CharterRate('C-Gull II', 'Private Charter', 'Potluck', 20, 2800, 3200)])
+    ,
+    new CharterRates('Pacific Pearl',
+      [
+        new CharterRate('Pacific Pearl', 'Private Charter', 'Rockfish/Lingcod', 20, 2800, 3200),
+        new CharterRate('Pacific Pearl', 'Private Charter', 'Potluck', 20, 2800, 3200)])
+    ,
+    new CharterRates('Sea Wolf',
+      [
+        new CharterRate('Sea Wolf', 'Private Charter', 'Rockfish/Lingcod', 20, 2800, 3200),
+        new CharterRate('Sea Wolf', 'Private Charter', 'Potluck', 20, 2800, 3200)])
+    ,
+    new CharterRates('Sea Wolf',
+      [
+        new CharterRate('Sea Wolf', 'Private Charter', 'Rockfish/Lingcod', 20, 2800, 3200),
+        new CharterRate('Sea Wolf', 'Private Charter', 'Potluck', 20, 2800, 3200)])
+
+
+  ];
 
   ngOnInit() {
   }

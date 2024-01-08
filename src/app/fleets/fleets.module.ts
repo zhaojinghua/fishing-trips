@@ -5,10 +5,10 @@ import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [FleetsComponent],
-    imports: [
-        RouterModule.forChild([{path: '', component: FleetsComponent}]),
-        CommonModule
-    ],
+  imports: [
+    RouterModule.forChild([{path: '', component: FleetsComponent}]),
+    CommonModule
+  ],
   exports: [RouterModule]
 })
 export class FleetsModule {

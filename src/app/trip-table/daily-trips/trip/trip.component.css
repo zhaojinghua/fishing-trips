@@ -5,6 +5,7 @@
   border: 1px solid black;
   color: #261E14;
 }
+
 .trip-head {
   background: white;
   font-size: 14px;
@@ -14,12 +15,14 @@
   padding: 5px;
   border-bottom: 1px solid black;
 }
+
 .trip-details {
   background-color: white;
   font-size: 13px;
   color: black;
   text-align: center;
   padding: 5px;
+  border-bottom: 1px solid black;
 }
 
 .trip-status {

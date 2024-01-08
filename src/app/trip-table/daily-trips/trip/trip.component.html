@@ -2,8 +2,8 @@
   <div class="col-12">
     <table class="trip-table">
       <tr *ngIf="isFirstChild" class="trip-row d-none d-md-table-row">
-        <td class="trip-head" style="width: 5%;">S</td>
-        <td class="trip-head" style="width: 95%;">
+        <td class="trip-head" style="width: 2%;">S</td>
+        <td class="trip-head" style="width: 98%;">
           <div class="row col-12 g-0">
             <div class="col-md-4 text-center"><span class="lbl">Trip Info</span></div>
             <div class="col-md-2 text-center"><span class="lbl">Departure</span></div>
@@ -15,20 +15,37 @@
         </td>
       </tr>
       <tr class="trip-row">
-        <td rowspan="2" class="trip-status" style="width: 5%;">{{ trip.availableSpots < trip.capacity ? "O" : "F" }}</td>
-        <td class="trip-details" style="width: 95%;">
+        <td class="trip-status" rowspan="2" style="width: 2%;"><img [src]="trip.availableSpots > 0 ? '/assets/green-status.png' : '/assets/red-status.png'"
+                                                                    alt="missing status image"
+                                                                    style="width: 36px;"></td>
+        <td class="trip-details" style="width: 98%;">
           <div class="row col-12 g-0">
-            <div class="col-md-4 col-sm-12 trip-info" style="padding-left: 15px; padding-right:15px;text-align: center !important;"><span class="lbl"></span><strong>{{ trip.boatName }}</strong><hr class="d-block d-md-none" style="margin-left: -20px; margin-right: -20px;"></div>
-            <div class="col-md-2 col-sm-6 col-xs-12 trip-depart" style="padding-left: 15px; padding-right:15px;text-align: right;"><span class="d-inline-grid d-md-none fw-semibold" style="float: left;">Departs:</span>{{ trip.departureDate | date: 'shortDate' }} <br class="d-none d-md-block">{{ trip.departureDate | date: 'shortTime' }}</div>
-            <div class="col-md-2 col-sm-6 col-xs-12 trip-return" style="padding-left: 15px; padding-right:15px;text-align: right;"><span class="d-inline-grid d-md-none fw-semibold" style="float: left;">Return:</span>{{ trip.returnDate | date: 'shortDate' }} <br class="d-none d-md-block">{{ trip.returnDate | date: 'shortTime' }}</div>
-            <div class="col-md-1 col-4 trip-load" style="padding-left: 15px; padding-right:15px;"><span class="d-inline-grid d-md-none fw-semibold">Load:</span>&nbsp;{{ trip.capacity }}</div>
-            <div class="col-md-1 col-4 trip-price" style="padding-left: 15px; padding-right:15px;"><span class="d-inline-grid d-md-none fw-semibold">Price:</span>&nbsp;{{ trip.price }}</div>
-            <div class="col-md-2 col-4 trip-spots" style="padding-left: 15px; padding-right:15px;"><span class="d-inline-grid d-md-none fw-semibold">Spots:</span><span class="font_red13">&nbsp;{{ trip.availableSpots < trip.capacity ? trip.availableSpots : "Full"}}</span></div>
+            <div class="col-md-4 col-sm-12 trip-info"
+                 style="padding-left: 15px; padding-right:15px;text-align: center !important;"><span class="lbl"></span><strong>{{ trip.boatName }}</strong>
+              <hr class="d-block d-md-none" style="margin-left: -20px; margin-right: -20px;">
+            </div>
+            <div class="col-md-2 col-sm-6 col-xs-12 trip-depart"
+                 style="padding-left: 15px; padding-right:15px;text-align: right;"><span
+              class="d-inline-grid d-md-none fw-semibold"
+              style="float: left;">Departs:</span>{{ trip.departureDate | date: 'shortDate' }} <br
+              class="d-none d-md-block">{{ trip.departureDate | date: 'shortTime' }}</div>
+            <div class="col-md-2 col-sm-6 col-xs-12 trip-return"
+                 style="padding-left: 15px; padding-right:15px;text-align: right;"><span
+              class="d-inline-grid d-md-none fw-semibold"
+              style="float: left;">Return:</span>{{ trip.returnDate | date: 'shortDate' }} <br
+              class="d-none d-md-block">{{ trip.returnDate | date: 'shortTime' }}</div>
+            <div class="col-md-1 col-4 trip-load" style="padding-left: 15px; padding-right:15px;"><span
+              class="d-inline-grid d-md-none fw-semibold">Load:</span>&nbsp;{{ trip.capacity }}</div>
+            <div class="col-md-1 col-4 trip-price" style="padding-left: 15px; padding-right:15px;"><span
+              class="d-inline-grid d-md-none fw-semibold">Price:</span>&nbsp;{{ trip.price }}</div>
+            <div class="col-md-2 col-4 trip-spots" style="padding-left: 15px; padding-right:15px;"><span
+              class="d-inline-grid d-md-none fw-semibold">Spots:</span><span
+              class="font_red13">&nbsp;{{ trip.availableSpots > 0 ? trip.availableSpots : "Full"}}</span></div>
           </div>
         </td>
       </tr>
       <tr *ngIf="!!trip.notes" class="trip-row">
-        <td class="trip-notes" [ngClass]="{'last-row-border': isLastChild}">
+        <td [ngClass]="{'last-row-border': isLastChild}" class="trip-notes">
           <div>{{ trip.notes }}</div>
         </td>
       </tr>

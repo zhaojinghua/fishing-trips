@@ -1,12 +1,14 @@
 <div class="container-bg">
-  <div class="container"  style="background-color: white; padding-top: 30px;">
+  <div class="container" style="background-color: white; padding-top: 30px;">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
-      <div class="col" *ngFor="let boat of boats">
+      <div *ngFor="let boat of boats" class="col">
         <div class="card h-100">
-          <h5 style="margin-top: 12px;" class="card-title text-center">{{ boat.boatName }}</h5>
-          <img style="border-top-left-radius: 0;border-top-right-radius: 0;" class="card-img-top" src="{{ boat.imageUrl }}" alt="Card image missing">
+          <h5 class="card-title text-center" style="margin-top: 12px;">{{ boat.boatName }}</h5>
+          <img alt="Card image missing" class="card-img-top"
+               src="{{ boat.imageUrl }}" style="border-top-left-radius: 0;border-top-right-radius: 0;">
           <div class="card-body text-center">
-            <div style="margin-top: 30px; margin-bottom: 20px;"><span class="fw-bold">Captain: </span>{{ boat.captain }}</div>
+            <div style="margin-top: 30px; margin-bottom: 20px;"><span class="fw-bold">Captain: </span>{{ boat.captain }}
+            </div>
             <button class="btn btn-outline-info">{{ boat.boatName }} Sportfishing</button>
           </div>
         </div>

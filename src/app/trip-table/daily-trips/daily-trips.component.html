@@ -1,4 +1,5 @@
 <h4 style="text-align: center">{{dailyTrips.tripDate | date}}</h4>
-<app-trip *ngFor="let trip of dailyTrips.trips; let i = index" [trip]="trip" [isFirstChild]="i === 0" [isLastChild]="i === dailyTrips.trips.length"></app-trip>
+<app-trip *ngFor="let trip of dailyTrips.trips; let i = index" [isFirstChild]="i === 0" [isLastChild]="i === dailyTrips.trips.length"
+          [trip]="trip"></app-trip>
 <br>
 <br>

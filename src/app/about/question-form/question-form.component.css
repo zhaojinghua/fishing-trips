@@ -1,0 +1,10 @@
+label {
+  float: left !important;
+  width: 20% !important;
+  font-weight: bold;
+}
+
+input {
+  display: block !important;
+  width: 80% !important;
+}
